@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Database } from "@/schema";
+import Link from "next/link";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
 export default function Avatar({ uid, url, size, onUpload }: { uid: string; url: Profiles["avatar_url"]; size: number; onUpload: (url: string) => void }) {
