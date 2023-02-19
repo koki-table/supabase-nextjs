@@ -1,6 +1,6 @@
 import { useState, useEffect } from "react";
 import { useUser, useSupabaseClient, Session } from "@supabase/auth-helpers-react";
-import { Database } from "@/schema";
+import { Database } from "@/types/schema";
 import Avatar from "./Avatar";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];

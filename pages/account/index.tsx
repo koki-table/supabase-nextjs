@@ -7,7 +7,7 @@ const Post = () => {
 
   return (
     <div className="container" style={{ padding: "50px 0 100px 0", width: "300px" }}>
-      <Account session={session} />
+      <Account session={session!} />
     </div>
   );
 };
