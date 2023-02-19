@@ -1,3 +1,0 @@
-curl 'https://eafbdkrrnoddrrmzrwmf.supabase.co/rest/v1/profiles?select=id' \
--H "apikey: SUPABASE_KEY" \
--H "Authorization: Bearer SUPABASE_KEY"

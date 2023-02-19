@@ -37,3 +37,6 @@ next-env.d.ts
 
 # generated api schema
 gen_schema.sh
+
+# http test
+sample.res.env
