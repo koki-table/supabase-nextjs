@@ -17,10 +17,10 @@ export interface Database {
     Functions: {
       graphql: {
         Args: {
-          operationName: string
-          query: string
-          variables: Json
-          extensions: Json
+          operationName?: string
+          query?: string
+          variables?: Json
+          extensions?: Json
         }
         Returns: Json
       }
@@ -34,20 +34,7 @@ export interface Database {
   }
   public: {
     Tables: {
-      employees: {
-        Row: {
-          id: number
-          name: string | null
-        }
-        Insert: {
-          id?: never
-          name?: string | null
-        }
-        Update: {
-          id?: never
-          name?: string | null
-        }
-      }
+      [_ in never]: never
     }
     Views: {
       [_ in never]: never
@@ -151,31 +138,40 @@ export interface Database {
     }
     Functions: {
       extension: {
-        Args: { name: string }
+        Args: {
+          name: string
+        }
         Returns: string
       }
       filename: {
-        Args: { name: string }
+        Args: {
+          name: string
+        }
         Returns: string
       }
       foldername: {
-        Args: { name: string }
+        Args: {
+          name: string
+        }
         Returns: string[]
       }
       get_size_by_bucket: {
         Args: Record<PropertyKey, never>
-        Returns: { size: number; bucket_id: string }[]
+        Returns: {
+          size: number
+          bucket_id: string
+        }[]
       }
       search: {
         Args: {
           prefix: string
           bucketname: string
-          limits: number
-          levels: number
-          offsets: number
-          search: string
-          sortcolumn: string
-          sortorder: string
+          limits?: number
+          levels?: number
+          offsets?: number
+          search?: string
+          sortcolumn?: string
+          sortorder?: string
         }
         Returns: {
           name: string

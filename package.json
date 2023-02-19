@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "gen-scheme": "./gen_schema.sh"
   },
   "dependencies": {
     "@next/font": "13.1.6",
@@ -25,6 +26,7 @@
     "typescript": "4.9.5"
   },
   "devDependencies": {
+    "openapi-typescript": "5.4.1",
     "supabase": "^1.37.1"
   }
 }
