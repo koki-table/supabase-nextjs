@@ -5,8 +5,14 @@ https://supabase-nextjs-k518kdf1u-koki-table.vercel.app/
 
 ### ローカルに下記ファイルを準備（開発担当に問い合わせが必要）
 .env.local
+
 gen_schema.sh
 
+---
+
+productionブランチにpushにより、vercelから自動デプロイで本番公開
+
+---
 
 This is a [Next.js](https://nextjs.org/) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
 
