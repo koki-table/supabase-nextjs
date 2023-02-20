@@ -1,7 +1,6 @@
 import { Memo } from "@/features/memo";
 
-const Post = () => {
-
+const MemoPage = () => {
   return (
     <div className="container" style={{ padding: "50px 0 100px 0", width: "300px" }}>
       <Memo />
@@ -9,5 +8,5 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default MemoPage;
 
