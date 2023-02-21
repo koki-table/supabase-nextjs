@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { useUser, useSupabaseClient, Session } from "@supabase/auth-helpers-react";
 import { Database } from "@/types/schema";
 import Avatar from "./Avatar";
+import Link from "next/link";
 
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
@@ -101,6 +102,7 @@ export default function Account({ session }: { session: Session }) {
           Sign Out
         </button>
       </div>
+      <Link href="/">TOPに戻る</Link>
     </div>
   );
 }
