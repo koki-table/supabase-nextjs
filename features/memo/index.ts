@@ -1,1 +1,1 @@
-export * from './components/Memo';
+export * from './routes/Memo';
