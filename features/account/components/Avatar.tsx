@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import { useSupabaseClient } from "@supabase/auth-helpers-react";
 import { Database } from "@/types/schema";
-import Link from "next/link";
 type Profiles = Database["public"]["Tables"]["profiles"]["Row"];
 
-export default function Avatar({ uid, url, size, onUpload }: { uid: string; url: Profiles["avatar_url"]; size: number; onUpload: (url: string) => void }) {
+export const Avatar = ({ uid, url, size, onUpload }: { uid: string; url: Profiles["avatar_url"]; size: number; onUpload: (url: string) => void }) => {
   const supabase = useSupabaseClient<Database>();
   const [avatarUrl, setAvatarUrl] = useState<Profiles["avatar_url"]>(null);
   const [uploading, setUploading] = useState(false);
 
   useEffect(() => {
     if (url) downloadImage(url);
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [url]);
 
   async function downloadImage(path: string) {

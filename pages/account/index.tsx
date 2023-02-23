@@ -1,4 +1,4 @@
-import Account from "@/features/Account";
+import { Account } from "@/features/account/";
 import { useSession } from "@supabase/auth-helpers-react";
 
 const AccountPage = () => {
